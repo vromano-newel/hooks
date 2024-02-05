@@ -3,10 +3,11 @@
 INPUT_FILE=$1
 COMMIT_MSG=$(head -n1 "$INPUT_FILE")
 
-REGEX='^\[(CU-[a-zA-Z0-9_ ]+)\]+([a-zA-Z0-9_ ]+)$'
+REGEX='^\[(CU-[a-zA-Z0-9_ ]+)\]+([a-zA-Z0-9!#$%ˆ&*()-=+._ ]+)$'
 
 ## checking commit-message format
-if ! [[ $COMMIT_MSG =~ $REGEX ]];then
+if ! [[ $COMMIT_MSG =~ $REGEX ]];
+then
    echo -e "Your commit-message format is not valid:\n$COMMIT_MSG\n"
    echo "Valid format examples:"
    echo "[CU-xxx123] My commit message"
