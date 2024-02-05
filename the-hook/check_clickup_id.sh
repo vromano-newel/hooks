@@ -1,7 +1,8 @@
 #!/bin/bash
 
 COMMIT_MSG=$(git log -1 HEAD --pretty=format:%s)
-REGEX='^\[(CU+-[:alnum:]+)]([[:blank:]]+[[:alnum:]_'"'"'-]+)+$'
+#REGEX='^\[(CU+-[:alnum:]+)]([[:blank:]]+[[:alnum:]_'"'"'-]+)+$'
+REGEX='^\[(CU-[a-zA-Z0-9_ ]+)\]+([a-zA-Z0-9_ ]+)$'
 
 ## checking commit-message format
 if ! [[ $COMMIT_MSG =~ $REGEX ]];then
