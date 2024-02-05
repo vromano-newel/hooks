@@ -4,3 +4,5 @@
   description: prevents commits without clickup-id in message.
   entry: hooks/check_clickup_id.sh
   language: script
+  types: [text]
+  stages: [commit, push, manual]
