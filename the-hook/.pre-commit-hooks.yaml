@@ -1,0 +1,6 @@
+# .pre-commit-hooks.yaml
+- id: check-clickup-id
+  name: check clickup id
+  description: prevents commits without clickup-id in message.
+  entry: check_clickup_id
+  language: python
