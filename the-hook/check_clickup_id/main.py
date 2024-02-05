@@ -2,6 +2,7 @@
 import argparse
 
 def check_commit(arguments: list[str]):
+    print('list:')
     for argument in arguments:
         print(argument)
 
@@ -10,8 +11,7 @@ def main():
     parser.add_argument("filenames", nargs="*")
     args = parser.parse_args()
 
-    print_arguments(args.filenames)
-    exit(1)
+    check_commit(args.filenames)
 
 
 if __name__ == "__main__":

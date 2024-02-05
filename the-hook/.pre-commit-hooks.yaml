@@ -2,5 +2,5 @@
 - id: check-clickup-id
   name: check clickup id
   description: prevents commits without clickup-id in message.
-  entry: check_clickup_id
-  language: python
+  entry: the-hook/check_clickup_id.sh
+  language: script
