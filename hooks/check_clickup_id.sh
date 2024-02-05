@@ -1,8 +1,7 @@
 #!/bin/bash
 
-
-COMMIT_MSG=$1
-#COMMIT_MSG=$(git log -1 HEAD --pretty=format:%s) # last commit
+INPUT_FILE=$1
+COMMIT_MSG=$(head -n1 "$INPUT_FILE")
 
 REGEX='^\[(CU-[a-zA-Z0-9_ ]+)\]+([a-zA-Z0-9_ ]+)$'
 
