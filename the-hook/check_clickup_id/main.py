@@ -1,11 +1,9 @@
 # print_arguments/main.py
 import argparse
 
-
 def check_commit(arguments: list[str]):
     for argument in arguments:
         print(argument)
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -13,6 +11,7 @@ def main():
     args = parser.parse_args()
 
     print_arguments(args.filenames)
+    exit(1)
 
 
 if __name__ == "__main__":
