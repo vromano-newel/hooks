@@ -1,6 +1,12 @@
 #!/bin/bash
 
-COMMIT_MSG=$(git log -1 HEAD --pretty=format:%s)
+# The below input_file is file ".git/COMMIT_EDITMSG" where commits are stored
+INPUT_FILE=$1
+# It will copy the commit string from ".git/COMMIT_EDITMSG"
+COMMIT_MSG=$(head -n1 "$INPUT_FILE")
+
+#COMMIT_MSG=$(git log -1 HEAD --pretty=format:%s)
+
 REGEX='^\[(CU-[a-zA-Z0-9_ ]+)\]+([a-zA-Z0-9_ ]+)$'
 
 ## checking commit-message format
